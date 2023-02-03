@@ -657,9 +657,9 @@ public class HomeActivity extends BaseActivity implements Observer {
 //                }
 
                 if (layout_home_screen.getVisibility() == View.VISIBLE) {
-                    Log.e("TAG","Rupesh Checkin test");
+                    //Log.e("TAG","Rupesh Checkin test");
                     try {
-/*
+
                         SimpleDateFormat sdffordatetime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss aa", Locale.getDefault());
                         SimpleDateFormat sdffordate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
                         String currentdt = sdffordatetime.format(new Date());
@@ -670,13 +670,22 @@ public class HomeActivity extends BaseActivity implements Observer {
                         Date CurDttime = sdffordatetime.parse(currentdt);
                         Date OnDttime =  sdffordatetime.parse(onDt);
                         Date OffDttime =  sdffordatetime.parse(offDt);
-                        Log.e("TAG", "New On time : " + String.valueOf(OnDttime) + " New Current Time : " + String.valueOf(CurDttime) + "  New Off time : " + String.valueOf(OffDttime));
-                        Log.e("TAG", "New On time : " + String.valueOf(OnDttime.getTime()) + " New Current Time : " + String.valueOf(CurDttime.getTime()) + "  New Off time : " + String.valueOf(OffDttime.getTime()));
+                        //Log.e("TAG","Night Stats : " + String.valueOf(nightModeStatus));
+                        //Log.e("TAG", "New On time : " + String.valueOf(OnDttime) + " New Current Time : " + String.valueOf(CurDttime) + "  New Off time : " + String.valueOf(OffDttime));
+                        //Log.e("TAG", "New On time : " + String.valueOf(OnDttime.getTime()) + " New Current Time : " + String.valueOf(CurDttime.getTime()) + "  New Off time : " + String.valueOf(OffDttime.getTime()));
                         //as per ken touchscreen windows CE logic
-                        if (OffDttime.getTime() == OnDttime.getTime())
+                        if (prefManager.getOnNightMode().equals("12:00:00 AM") && prefManager.getOffNightMode().equals("12:00:00 AM"))
+                        {
+                            nightModeStatus = true;
+                        }
+                        else if (prefManager.getOnNightMode().equals("12:00:00 PM") && prefManager.getOffNightMode().equals("12:00:00 PM"))
                         {
                             nightModeStatus = false;
-                            Log.e("TAG","As per ken night mode off when both are same");
+                        }
+                        else if (OffDttime.getTime() == OnDttime.getTime())
+                        {
+                            nightModeStatus = false;
+                            //Log.e("TAG","As per ken night mode off when both are same");
                         }
                         else
                         {
@@ -687,7 +696,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                                     if (CurDttime.getTime() >= OnDttime.getTime() || CurDttime.getTime() < OffDttime.getTime())
                                     {
                                         nightModeStatus = true;
-                                        Log.e("TAG","As per ken night mode On 1st");
+                                        //Log.e("TAG","As per ken night mode On 1st");
                                     }
                                 }
                                 else
@@ -695,7 +704,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                                     if (CurDttime.getTime() < OnDttime.getTime() && CurDttime.getTime() >= OffDttime.getTime())
                                     {
                                         nightModeStatus = false;
-                                        Log.e("TAG","As per ken night mode OFF 2nd");
+                                        //Log.e("TAG","As per ken night mode OFF 2nd");
                                     }
                                 }
                             }
@@ -706,7 +715,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                                     if (CurDttime.getTime() >= OnDttime.getTime() && CurDttime.getTime() < OffDttime.getTime())
                                     {
                                         nightModeStatus = true;
-                                        Log.e("TAG","As per ken night mode On 3rd");
+                                        //Log.e("TAG","As per ken night mode On 3rd");
                                     }
                                 }
                                 else
@@ -714,43 +723,43 @@ public class HomeActivity extends BaseActivity implements Observer {
                                     if (CurDttime.getTime() < OnDttime.getTime() || CurDttime.getTime() >= OffDttime.getTime())
                                     {
                                         nightModeStatus = false;
-                                        Log.e("TAG","As per ken night mode OFF 4th");
+                                        //Log.e("TAG","As per ken night mode OFF 4th");
                                     }
                                 }
                             }
                         }
+                        //Log.e("TAG","Night Stats : " + String.valueOf(nightModeStatus));
 
-
-                        if (OnDttime.getTime()<CurDttime.getTime())
-                        {
-                            //Log.e("TAG","Status is true with currenttime comparison as per ontime");
-                        }
-                        else if (OffDttime.after(CurDttime))
-                        {
-                            //Log.e("TAG","Status is true with currenttime comparison as per OFF OFF Time");
-                        }
-                        else
-                        {
-                            //Log.e("TAG","Status is FALSE FALSE comparison");
-                        }
-
-                        if (OffDttime.before(OnDttime))
-                        {
-                            Calendar c = Calendar.getInstance();
-                            c.setTime(OffDttime);
-                            c.add(Calendar.DATE, 1);
-                            OffDttime = c.getTime();
-                        }
-                        //Log.e("TAG", "New On time : " + String.valueOf(OnDttime) + " New Current Time : " + String.valueOf(CurDttime) + "  New Off time : " + String.valueOf(OffDttime));
-                        if (CurDttime.after(OnDttime) && CurDttime.before(OffDttime)) {
-                            //Log.e("TAG","Status is true");
-                            //nightModeStatus = true;
-                        }
-                        else
-                        {
-                            //Log.e("TAG","Status is false");
-                            //nightModeStatus = false;
-                        }
+//                        if (OnDttime.getTime()<CurDttime.getTime())
+//                        {
+//                            //Log.e("TAG","Status is true with currenttime comparison as per ontime");
+//                        }
+//                        else if (OffDttime.after(CurDttime))
+//                        {
+//                            //Log.e("TAG","Status is true with currenttime comparison as per OFF OFF Time");
+//                        }
+//                        else
+//                        {
+//                            //Log.e("TAG","Status is FALSE FALSE comparison");
+//                        }
+//
+//                        if (OffDttime.before(OnDttime))
+//                        {
+//                            Calendar c = Calendar.getInstance();
+//                            c.setTime(OffDttime);
+//                            c.add(Calendar.DATE, 1);
+//                            OffDttime = c.getTime();
+//                        }
+//                        //Log.e("TAG", "New On time : " + String.valueOf(OnDttime) + " New Current Time : " + String.valueOf(CurDttime) + "  New Off time : " + String.valueOf(OffDttime));
+//                        if (CurDttime.after(OnDttime) && CurDttime.before(OffDttime)) {
+//                            //Log.e("TAG","Status is true");
+//                            //nightModeStatus = true;
+//                        }
+//                        else
+//                        {
+//                            //Log.e("TAG","Status is false");
+//                            //nightModeStatus = false;
+//                        }
 
                         //Old logic and some help. This is not working when our off time is less than on time
                         //like 3:15 pm on time and 3:14 pm off time. As customer in canada wants to keep whole day in night mode..
@@ -778,8 +787,9 @@ public class HomeActivity extends BaseActivity implements Observer {
 ////                          2023-02-02 14:39:52.529 14901-14901/com.allentownblower E/TAG: Cu Time : Fri Jan 02 14:39:52 EST 1970
 ////                          2023-02-02 14:39:52.529 14901-14901/com.allentownblower E/TAG: Of Time : Fri Jan 02 11:55:00 EST 1970
 //
-*/
+
 //
+                        /*
                         String string1 = prefManager.getOnNightMode();
                         Date time1 = CodeReUse.newTimeFormat.parse(string1);
 
@@ -793,7 +803,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                         double hourDiff = (double) (mils / (1000 * 60 * 60));
                         double minuteFor = (double) (mils / (1000 * 60) % 60);
                         double secondfor = (double) (mils / 1000) % 60;
-                        Log.e("TAG", "Difference between now and Ontime : " + String.valueOf(hourDiff) + "   /   " + String.valueOf(minuteFor)+ "   /   " + String.valueOf(secondfor));
+                        //Log.e("TAG", "Difference between now and Ontime : " + String.valueOf(hourDiff) + "   /   " + String.valueOf(minuteFor)+ "   /   " + String.valueOf(secondfor));
                         double x = hourDiff;
                         if (x < 0)
                         {
@@ -811,7 +821,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                         hourDiff = (double) (mils / (1000 * 60 * 60));
                         minuteFor = (double) (mils / (1000 * 60) % 60);
                         secondfor = (double) (mils / 1000) % 60;
-                        Log.e("TAG", "Difference between now and OFFtime : " + String.valueOf(hourDiff)+ "   /   " + String.valueOf(minuteFor)+ "   /   " + String.valueOf(secondfor));
+                        //Log.e("TAG", "Difference between now and OFFtime : " + String.valueOf(hourDiff)+ "   /   " + String.valueOf(minuteFor)+ "   /   " + String.valueOf(secondfor));
                         double y = hourDiff;
                         if (y < 0)
                         {
@@ -835,7 +845,7 @@ public class HomeActivity extends BaseActivity implements Observer {
                         {
                             nightModeStatus = false;
                         }
-
+                    */
 
 
                     } catch (ParseException e) {
@@ -3907,6 +3917,7 @@ public class HomeActivity extends BaseActivity implements Observer {
 
                         txt_OnTime_nightModeSetting.setText(CodeReUse.formatter2Digit.format(selectedHour) + ":" + CodeReUse.formatter2Digit.format(selectedMinute) + " " + AM_PM);
                         prefManager.setOnNightMode(CodeReUse.formatter2Digit.format(selectedHour) + ":" + CodeReUse.formatter2Digit.format(selectedMinute) + ":00" + " " + AM_PM);
+                        nightModeStatus = false;
                     }
                 }, hour, minute, false); // true 24 hour time false 12 hour time
                 mTimePicker.setTitle("Select Time");
@@ -4106,6 +4117,7 @@ public class HomeActivity extends BaseActivity implements Observer {
 
                         txt_OffTime_nightModeSetting.setText(CodeReUse.formatter2Digit.format(selectedHour) + ":" + CodeReUse.formatter2Digit.format(selectedMinute) + " " + AM_PM);
                         prefManager.setOffNightMode(CodeReUse.formatter2Digit.format(selectedHour) + ":" + CodeReUse.formatter2Digit.format(selectedMinute) + ":00" + " " + AM_PM);
+                        nightModeStatus = false;
                     }
                 }, hour, minute, false); // true 24 hour time false 12 hour time
                 mTimePicker.setTitle("Select Time");
