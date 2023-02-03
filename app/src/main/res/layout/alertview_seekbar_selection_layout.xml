@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:id="@+id/txt_dailogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="CFM CNTL SETPOINT"
+            android:textStyle="bold"
+            android:textColor="@color/blwrdetl_dark_blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:layout_above="@+id/seekbar_Progress_Selection"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_MinSeekbar_Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="0"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/txt_SelectedSeekbar_Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:minWidth="@dimen/_40sdp"
+                android:maxWidth="@dimen/_80sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="0"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/txt_MaxSeekbar_Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="125"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <com.warkiz.widget.IndicatorSeekBar
+            android:id="@+id/seekbar_Progress_Selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:isb_show_indicator="none"
+            app:isb_only_thumb_draggable="false"
+            app:isb_show_tick_texts="false"
+            app:isb_thumb_size="@dimen/_20sdp"
+            app:isb_track_progress_size="@dimen/_5sdp"
+            app:isb_track_background_size="@dimen/_5sdp"
+            app:isb_track_rounded_corners="true"
+            app:isb_track_progress_color="@color/blwrdetl_dark_blue"
+            app:isb_track_background_color="@color/lightGre"
+            app:isb_thumb_drawable="@drawable/seekbar_thumb"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_below="@+id/seekbar_Progress_Selection"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/txt_Minus_Progress"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:gravity="center"
+                android:src="@drawable/ic_left_arrow_icon"
+                android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                android:layout_toLeftOf="@+id/txt_SelectedSeekbar_Progress_NotInUse"
+                tools:ignore="VectorDrawableCompat" />
+
+            <TextView
+                android:id="@+id/txt_SelectedSeekbar_Progress_NotInUse"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textSize="@dimen/_12sdp"
+                android:minWidth="@dimen/_40sdp"
+                android:maxWidth="@dimen/_80sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="0"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                android:textColor="@color/white"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/txt_Plus_Progress"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:rotation="180"
+                android:src="@drawable/ic_left_arrow_icon"
+                android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/txt_SelectedSeekbar_Progress_NotInUse"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_7sdp"
+        android:background="@color/lightgray">
+
+        <TextView
+            android:id="@+id/btn_Cancel_Selection"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_red_menu_screen_box"/>
+
+        <TextView
+            android:id="@+id/btn_Save_Selection"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Save"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_green_home_screen_box"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

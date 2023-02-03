@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorBuletoothBackground">#616161</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="blackOpacity">#65000000</color>
+
+    <color name="lightgray">#D3D3D3</color>
+    <color name="lightGre">#ECEBEB</color>
+
+    <color name="home_green">#009900</color>
+    <color name="home_red">#FF0400</color>
+    <color name="home_yellow">#FFFF00</color>
+    <color name="home_dark_green">#006600</color>
+    <color name="home_dark_red">#C60D00</color>
+    <color name="home_dark_yellow">#CCCC00</color>
+
+    <color name="blwrdetl_blue">#0000ff</color>
+    <color name="blwrdetl_dark_blue">#000099</color>
+
+    <color name="nightMode_red">#E10000</color>
+
+    <color name="menu_purple">#9966CC</color>
+    <color name="menu_red">#FF0400</color>
+    <color name="menu_dark_red">#880808</color>
+    <color name="homeredsppbcu">#8C0808</color>
+
+    <color name="menu_skyblue">#33CCFF</color>
+    <color name="menu_yellow">#FFCC00</color>
+    <color name="menu_yellow_dark">#FF9900</color>
+    <color name="menu_gre">#999999</color>
+    <color name="menu_dark_gre">#333333</color>
+
+    <color name="colorPrimaryLight">#F5F5F5</color>
+
+    <color name="txt_skyblue">#03A9F4</color>
+
+    <!-- color for table-->
+
+    <color name="bg_line">#E7E7E7</color>
+
+    <color name="cell_background_color">#ffffff</color>
+    <color name="header_line_color">@android:color/holo_red_light</color>
+
+    <color name="table_view_default_text_color">#0a0a0a</color>
+
+    <color name="bg_spp">#00A5DE</color>
+    <color name="bg_box_spp">#005AB5</color>
+
+    <color name="bg_bcu2">#FF6300</color>
+    <color name="bg_box_bcu2">#FF4200</color>
+
+</resources>

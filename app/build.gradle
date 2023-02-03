@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.allentownblower"
+        minSdkVersion 16
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+        // Enabling multidex support.
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.10.2+"
+        }
+    }
+    aaptOptions {
+        noCompress 'db'
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        resources.excludes.add("META-INF/*")
+    }
+    ndkVersion '21.3.6528147'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // dependency file for multidex
+    implementation 'com.android.support:multidex:1.0.3'
+    // dependency file for volley
+    implementation 'com.android.volley:volley:1.2.0'
+    // dependency file for sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+    // dependency file for recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    // dependency file for indicatorseekbar
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+    // dependency file for gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //dependency library for Log
+    implementation 'org.tinylog:tinylog-api:2.2.1'
+    implementation 'org.tinylog:tinylog-impl:2.2.1'
+
+    //Dependency TableView
+    implementation 'com.evrencoskun.library:tableview:0.8.9.2'
+
+    // dependency Usb Drive Read and Write
+    implementation 'me.jahnen:libaums:0.7.6'
+    implementation 'me.jahnen:libaums-httpserver:0.5.3'
+    implementation 'me.jahnen:libaums-storageprovider:0.5.1'
+    compileOnly(files('C:\\Allentown Temp\\Allentown Blower_2401\\Allentown.Android.SPPBCU2\\SystemProperties.jar'))
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'net.java.dev.jna:jna-platform:5.6.0'
+}

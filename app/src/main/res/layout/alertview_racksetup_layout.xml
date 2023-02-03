@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:id="@+id/txt_dailogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Alert!"
+            android:textStyle="bold"
+            android:textColor="@color/blwrdetl_dark_blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_dailogDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:text="You have successfully set up the Blower."
+                android:textStyle="bold"
+                android:textColor="@color/blwrdetl_dark_blue"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_7sdp"
+        android:background="@color/lightgray">
+
+        <TextView
+            android:id="@+id/btn_Ok_Selection"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="OK"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_green_home_screen_box"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

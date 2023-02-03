@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.allentownblower">
+    <!--
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    -->
+    <uses-feature android:name="android.hardware.bluetooth" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_WRITE_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="android.permission.BLUETOOTH"
+        android:label="BLUETOOTH" />
+    <permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- <uses-feature android:name="android.hardware.usb.host" /> -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"
+        tools:ignore="ManifestOrder" />
+
+    <application
+        android:name=".application.AllentownBlowerApplication"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RackDetailScreenActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ReportFilterActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="landscape">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- &lt;!&ndash; -->
+            <!-- <category android:name="android.intent.category.HOME" /> -->
+            <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            <!-- &ndash;&gt; -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".activity.RackSetUpNewActivity"
+            android:screenOrientation="landscape">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <receiver
+            android:name=".receiver.BootReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.DiagnosticsCommandService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.allentownblower.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths_external" />
+        </provider>
+        <provider
+            android:name="com.github.mjdev.libaums.storageprovider.UsbDocumentProvider"
+            android:authorities="com.github.mjdev.libaums.storageprovider.documents"
+            android:enabled="@bool/isAtLeastKitKat"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+            </intent-filter>
+        </provider>
+    </application>
+
+</manifest>

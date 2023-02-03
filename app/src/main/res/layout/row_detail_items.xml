@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_Row_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="mayur"
+                android:textStyle="bold"
+                android:textColor="@color/menu_dark_gre"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/txt_Row_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="mayur"
+                android:textStyle="normal"
+                android:textColor="@color/menu_dark_gre"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="@dimen/_7sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/right_arrow_grayy"
+        android:tint="@color/menu_dark_gre"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

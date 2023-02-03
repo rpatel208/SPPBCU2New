@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_green"
+    tools:context=".activity.RackSetUpActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_model_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/text_model_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="Rack Model No : "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <EditText
+                    android:id="@+id/txt_model_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="Find" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_ach_polarity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_ach"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_ach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="left|center"
+                        android:layout_weight="0.1"
+                        android:text="ACH : "
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_ach"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:spinnerMode="dropdown" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_polarity"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_polarity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:text="Polarity : "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_polarity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_w_o_lock"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/text_w_o_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:text="Lock : "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonWith"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:buttonTint="@color/white"
+                            android:checked="false"
+                            android:tag="1"
+                            android:text="With"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonWithOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:buttonTint="@color/white"
+                            android:checked="false"
+                            android:tag="0"
+                            android:text="Without"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_supply_exhaust"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_supply"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_supply"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/text_supply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:gravity="left|center"
+                            android:text="Supply(CFM) :"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_supply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/text_supply_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <EditText
+                            android:id="@+id/edt_supply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_layout_exhaust"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_exhaust"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/text_exhaust"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="left|center"
+                            android:text="Exhaust(WC) : "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_exhaust"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:spinnerMode="dropdown"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/text_exhaust_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <EditText
+                            android:id="@+id/edt_exhaust"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/_15sdp"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout_main"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:padding="@dimen/_10sdp"
+                android:text="save"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:padding="@dimen/_10sdp"
+                android:text="reset"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear_layout_buttons"
+            android:layout_margin="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Model number does not exits please try again"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

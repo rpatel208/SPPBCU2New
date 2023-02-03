@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:id="@+id/txt_dailogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="S/E measurement type"
+            android:textStyle="bold"
+            android:textColor="@color/blwrdetl_dark_blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_MultipleSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_7sdp"
+        android:background="@color/lightgray">
+
+        <TextView
+            android:id="@+id/btn_Cancel_Selection"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_red_menu_screen_box"/>
+
+        <TextView
+            android:id="@+id/btn_Save_Selection"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:textSize="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:text="Save"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:background="@drawable/dark_green_home_screen_box"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

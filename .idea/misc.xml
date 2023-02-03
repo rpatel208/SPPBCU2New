@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout-sw768dp/activity_home_bcu2.xml" value="0.214453125" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout-sw768dp/activity_home_spp.xml" value="0.214453125" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/activity_home.xml" value="0.1484375" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/activity_home_bcu2.xml" value="0.20729166666666668" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/activity_home_spp.xml" value="0.20729166666666668" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/activity_new_rack_set_up.xml" value="0.2916666666666667" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/activity_splash.xml" value="0.1484375" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/alertview_diagnostics_details_layout.xml" value="0.22552083333333334" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/alertview_diagnostics_layout.xml" value="0.14479166666666668" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/alertview_pre_filter_reset_layout.xml" value="0.2734375" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/alertview_seekbar_nagetive_selection_layout.xml" value="0.24375" />
+        <entry key="..\:/Allentown Temp/Allentown Blower_2401/Allentown.Android.SPPBCU2/app/src/main/res/layout/alertview_seekbar_selection_layout.xml" value="0.3651041666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

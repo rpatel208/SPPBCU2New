@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ReportFilterActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_title_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Start Date :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_value_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_title_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="End Date :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_value_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/txt_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.7"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Data :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_Report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/radioButton_Max_Min_Avg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:buttonTint="@color/black"
+                    android:checked="true"
+                    android:tag="1"
+                    android:text="Max/Min/Avg Data"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_All"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:buttonTint="@color/black"
+                    android:checked="false"
+                    android:tag="0"
+                    android:text="All Available Data"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_title_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Email :"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_value_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_title_email_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.7"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text=""
+                android:visibility="invisible"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0.4">
+
+                <TextView
+                    android:id="@+id/txt_view_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bluetooth_btn_background"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="View Report"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_export_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bluetooth_btn_background"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Export Report"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_send_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bluetooth_btn_background"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Create and Send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_layout_date"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/linear_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linear_reset_export"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="@dimen/_5sdp">
+
+            <com.evrencoskun.tableview.TableView
+                android:id="@+id/tableview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:allow_click_inside_cell="true"
+                app:allow_click_inside_column_header="true"
+                app:allow_click_inside_row_header="true">
+
+            </com.evrencoskun.tableview.TableView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_reset_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_reset_filter"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Reset Filter"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_export_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:visibility="gone"
+                android:text="Export Data"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_buttons_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_back"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bluetooth_btn_background"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Back"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_progress_report"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/ProgressBar_setting"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="@android:color/white"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_4sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/lightgray"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:id="@+id/txt_dailogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Alert Message"
+            android:textStyle="bold"
+            android:textColor="@color/blwrdetl_dark_blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_dailogMassage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Continue With Application"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/blwrdetl_dark_blue"/>
+
+            <LinearLayout
+                android:id="@+id/layout_dailog_S01_X1_X0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected : "
+                    android:textStyle="bold"
+                    android:textColor="@color/blwrdetl_dark_blue"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txt_dailog_S01_X1_X0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:minWidth="@dimen/_40sdp"
+                    android:maxWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_dailog_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please wait..."
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:textColor="@color/blwrdetl_dark_blue"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_timer_24"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/txt_dailog_timmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:minWidth="@dimen/_40sdp"
+                    android:maxWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:textStyle="bold"
+                android:textColor="@color/blwrdetl_dark_blue"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_dialog_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_dailogTitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@drawable/dark_red_menu_screen_box"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:layout_weight="1.7"/>
+
+                <TextView
+                    android:id="@+id/btn_dailogTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/dark_green_home_screen_box"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

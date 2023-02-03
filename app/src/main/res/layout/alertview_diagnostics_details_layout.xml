@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_green"
+    android:gravity="center"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/black_home_screen_textbox"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_1sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="DIAGNOSTICS DETAILS"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_F16_XXXX"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="24-hr stored value = 0000"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supply PWM Value"
+                            android:textColor="@color/blwrdetl_dark_blue"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_D10_XXXX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                            android:gravity="center"
+                            android:maxWidth="@dimen/_80sdp"
+                            android:minWidth="@dimen/_40sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="1023"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:id="@+id/seekbar_Progress_SupplyPWMValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    app:isb_only_thumb_draggable="false"
+                    app:isb_show_indicator="none"
+                    app:isb_show_tick_texts="false"
+                    app:isb_thumb_drawable="@drawable/seekbar_thumb_new"
+                    app:isb_thumb_size="@dimen/_20sdp"
+                    app:isb_track_background_color="@color/lightGre"
+                    app:isb_track_background_size="@dimen/_5sdp"
+                    app:isb_track_progress_color="@color/blwrdetl_dark_blue"
+                    app:isb_track_progress_size="@dimen/_5sdp"
+                    app:isb_track_rounded_corners="true"
+                    app:isb_user_seekable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Exhaust PWM Value"
+                            android:textColor="@color/blwrdetl_dark_blue"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_D11_XXXX"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/dark_blue_blwrdetl_screen_box"
+                            android:gravity="center"
+                            android:maxWidth="@dimen/_80sdp"
+                            android:minWidth="@dimen/_40sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="1023"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <com.warkiz.widget.IndicatorSeekBar
+                    android:id="@+id/seekbar_Progress_ExhaustPWMValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    app:isb_only_thumb_draggable="false"
+                    app:isb_show_indicator="none"
+                    app:isb_show_tick_texts="false"
+                    app:isb_thumb_drawable="@drawable/seekbar_thumb_new"
+                    app:isb_thumb_size="@dimen/_20sdp"
+                    app:isb_track_background_color="@color/lightGre"
+                    app:isb_track_background_size="@dimen/_5sdp"
+                    app:isb_track_progress_color="@color/blwrdetl_dark_blue"
+                    app:isb_track_progress_size="@dimen/_5sdp"
+                    app:isb_track_rounded_corners="true"
+                    app:isb_user_seekable="false" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/relative_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/relative_close"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_F13_Z2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Exhaust Blower is Overdriven!"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_close"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_diagnostics_details_close"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:text="CLOSE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <!-- <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:id="@+id/txt_diagnostics_details_close"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="CLOSE"
+                     android:textColor="@color/black"
+                     android:background="@color/white"
+                     android:paddingTop="@dimen/_4sdp"
+                     android:paddingBottom="@dimen/_4sdp"
+                     android:paddingLeft="@dimen/_10sdp"
+                     android:paddingRight="@dimen/_10sdp"
+                     android:textStyle="bold"
+                     android:textSize="@dimen/_11sdp" />
+
+                 <ProgressBar
+                     android:id="@+id/ProgressBar"
+                     style="?android:attr/progressBarStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:paddingTop="@dimen/_4sdp"
+                     android:paddingBottom="@dimen/_4sdp"
+                     android:paddingLeft="@dimen/_10sdp"
+                     android:paddingRight="@dimen/_10sdp"
+                     android:layout_marginRight="15dp"
+                     android:layout_marginLeft="15dp"/>
+
+             </RelativeLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_progress_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackOpacity"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="@android:color/white"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_4sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

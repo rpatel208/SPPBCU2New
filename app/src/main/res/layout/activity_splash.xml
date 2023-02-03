@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_green"
+    tools:context=".activity.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/img_logo_one"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/img_logo_two"
+            android:layout_width="@dimen/_182sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@drawable/ic_ecoflo_icon" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
