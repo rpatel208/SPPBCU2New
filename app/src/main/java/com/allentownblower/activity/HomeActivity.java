@@ -657,7 +657,7 @@ public class HomeActivity extends BaseActivity implements Observer {
 //                }
 
                 if (layout_home_screen.getVisibility() == View.VISIBLE) {
-
+                    Log.e("TAG","Rupesh Checkin test");
                     try {
 /*
                         SimpleDateFormat sdffordatetime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss aa", Locale.getDefault());
